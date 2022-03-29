@@ -375,3 +375,23 @@ body {
     width: 350px;
     height:60px;
 }
+
+.reg-item-8  {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.sub {
+    text-align: center;
+    font-size:40px;
+    width: 350px;
+    height:60px;
+}
+
+input:required:valid {
+    background: rgb(129, 255, 123);
+}
+input:required:invalid {
+    background: rgb(255, 123, 123);
+}
