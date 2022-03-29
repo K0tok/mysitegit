@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Прохождение курса Бодров</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header-container">
+  <div class="header-item header-item-1 passive-item"><a href="main.html">Главная</a></div>
+  <div class="header-item header-item-2 passive-item dropdown">
+    <button class="dropbutton"><a href="projects.html">Мои работы</a></button>
+    <div class="dropdown-content">
+      <a class="project-header-item-1" href="calculator.html"><u>Калькулятор</u></a>
+      <a class="project-header-item-2" href="registr.html"><u>Регистрация</u></a>
+      <a class="project-header-item-3 active-item" href="time.html"><u>Время</u></a>
+    </div>
+  </div>
+  <div class="header-item header-item-3 passive-item"><a href="useful.html">Полезное</a></div>
+</div>
+
+<style>.containerss div {display: none;}</style>
+
+<select id="selectItem">
+
+  <option id="chelyabinsk">Челябинск</option>
+  <option id="moskva">Москва</option>
+  <option id="piter">Санкт-Петербург</option>
+  <option id="nnovgor">Нижний Новгород</option>
+
+</select>
+
+<div class="containerss">
+
+  <div class="chelyabinsk"><span class="small">Тел.:</span> НОМЕР ТЕЛЕФОНА<br><span class="small">Email:</span> <a href="mailto:mail@mail.ru">mail@mail.ru</a></div>
+  <div class="moskva"><span class="small">Тел.:</span> НОМЕР ТЕЛЕФОНА<br><span class="small">Email:</span> <a href="mailto:mail@mail.ru">mail@mail.ru</a></div>
+  <div class="piter"><span class="small">Тел.:</span> НОМЕР ТЕЛЕФОНА<br><span class="small">Email:</span> <a href="mailto:mail@mail.ru">mail@mail.ru</a></div>
+  <div class="nnovgor"><span class="small">Тел.:</span> НОМЕР ТЕЛЕФОНА<br><span class="icq">426-968-289</span><br><span class="small">Email:</span> <a href="mailto:mail@mail.ru">mail@mail.ru</a></div>
+
+</div>
+
+
+
+<script type="text/javascript">
+  $( function() {
+
+    if (localStorage.getItem("myKey")) {
+      var stored_select = localStorage.getItem("myKey");
+      $('#' + stored_select).prop( "selected", true );
+      $('.' + stored_select).show();
+    } else {
+      $('.chelyabinsk').show();
+    }
+  });
+
+  $("#selectItem").change(function(){
+    $('.containerss').find('div').hide();
+    var selected = $('#selectItem option:selected').attr('id');
+    localStorage.setItem("myKey", selected);
+    $('.' + selected).show();
+  });
+</script>
+<div class="footer-container">
+  <div class="header-item header-item-1 passive-item"><a href="main.html">Главная</a></div>
+  <div class="header-item header-item-2 passive-item dropdown"><a href="projects.html">Мои работы</a></div>
+  <div class="header-item header-item-3 passive-item"><a href="useful.html">Полезное</a></div>
+</div>
+</body>
+</html>

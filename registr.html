@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Прохождение курса Бодров</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="maskinput.js"></script>
+    <script src="region.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="header-item header-item-1 passive-item"><a href="main.html">Главная</a></div>
+        <div class="header-item header-item-2 passive-item dropdown">
+            <button class="dropbutton"><a href="projects.html">Мои работы</a></button>
+            <div class="dropdown-content">
+                <a class="project-header-item-1" href="calculator.html"><u>Калькулятор</u></a>
+                <a class="project-header-item-2 active-item" href="registr.html"><u>Регистрация</u></a>
+                <a class="project-header-item-3" href="time.html"><u>Время</u></a>
+            </div>
+        </div>
+        <div class="header-item header-item-3 passive-item"><a href="useful.html">Полезное</a></div>
+    </div>
+
+    <div class="reg-container">
+        <div class="reg-item reg-item-1">
+                <strong>Базовая Форма Регистрации</strong>
+        </div>
+
+        <div class="reg-item reg-item-2">
+            <div>Ф.И.О.</div>
+            <input class="fiobutton" type="text" name="fio" id="fio" placeholder="Пример: Иванов Иван Иванович"/>
+        </div>
+
+        <div class="reg-item reg-item-3">
+            <div style="font-size: 40px;">Возраст</div>
+            <div class="date-container">
+                <div class="select-wrapper" id="date">
+                    <select autofocus="autofocus" style="font-size: 30px; text-align: center">
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                </div>
+
+                <div class="select-wrapper" id="month">
+                    <select autofocus="autofocus" style="font-size: 30px; text-align: center">
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="select-wrapper" id="year">
+                    <select autofocus="autofocus" style="font-size: 30px; text-align: center">
+                        <option value="1980-1990">1980-1990</option>
+                        <option value="1991-2000">1991-2000</option>
+                        <option value="2001-2010">2001-2010</option>
+                        <option value="2011-2020">2011-2020</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="reg-item reg-item-4">
+            <div style="font-size: 40px;">Ваш пол</div>
+            <div class="sex-container">
+                <div class="select-wrapper-sex" id="gender">
+                    <select style="font-size: 30px; text-align: center" autofocus="autofocus">
+                        <option value="male">Мужской</option>
+                        <option value="female">Женский</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="reg-item reg-item-5">
+            <div>Ваша Почта</div>
+            <div>
+                <label for="mail"></label><input class="mailbutton" type="text" name="mail" id="mail" placeholder="forexample@gmail.com"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="reg-item reg-item-6">
+        <div>Местоположение</div>
+        <div class="geo-container">
+            <div class="select-wrapper-geo">
+                <select autofocus="autofocus" id="region" style="font-size: 30px; text-align: center">
+                    <option>Регион</option>
+                    <option id="msk">Московская область</option>
+                    <option id="svrd">Свердловская область</option>
+                    <option id="len">Ленинградская область</option>
+                </select>
+            </div>
+            <div class="city-by-reg" style="display: none;">
+                <div class="msk">
+                    <select autofocus="autofocus" style="font-size: 30px; text-align: center">
+                        <option>Москва</option>
+                    </select>
+                </div>
+                <div class="svrd">
+                    <select autofocus="autofocus" style="font-size: 30px; text-align: center">
+                        <option>Екатеринбург</option>
+                    </select>
+                </div>
+                <div class="len">
+                    <select autofocus="autofocus" style="font-size: 30px; text-align: center">
+                        <option>Санкт-Петербург</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="reg-item reg-item-7">
+        <div>Ваш номер телефона</div>
+        <input type="tel" name="phone_number" class="tel" placeholder="+7 (900) 123-45-67" maxlength="16">
+    </div>
+    <div class="footer-container">
+        <div class="header-item header-item-1 passive-item"><a href="main.html">Главная</a></div>
+        <div class="header-item header-item-2 passive-item dropdown"><a href="projects.html">Мои работы</a></div>
+        <div class="header-item header-item-3 passive-item"><a href="useful.html">Полезное</a></div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

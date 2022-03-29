@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Прохождение курса Бодров</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="header-item header-item-1 passive-item"><a href="main.html">Главная</a></div>
+        <div class="header-item header-item-2 passive-item dropdown">
+            <button class="dropbutton"><a href="projects.html">Мои работы</a></button>
+            <div class="dropdown-content">
+                <a class="project-header-item-1 active-item" href="calculator.html"><u>Калькулятор</u></a>
+                <a class="project-header-item-2" href="registr.html"><u>Регистрация</u></a>
+                <a class="project-header-item-3" href="time.html"><u>Время</u></a>
+            </div>
+        </div>
+        <div class="header-item header-item-3 passive-item"><a href="useful.html">Полезное</a></div>
+    </div>
+
+    <div class="calc">
+        <div>
+            <h1 style="font-size:40px; text-align: center">
+                <nobr>Рассчет <em>периметра(P)</em> и <em>площади(S)</em> фигуры</nobr>
+            </h1>
+        </div>
+        <div class="square-container">
+            <div class="square-item square-item-1">
+                <h1 style="font-size:30px">Введите длину стороны квадрата(м):</h1>
+                <input class="input" type="text" name="length_s" id="length_s" placeholder="Введите число"/>
+            </div>
+            <div class="square-item square-item-2">
+                <button class="button" type="button" id="Perimeter_s">Рассчитать периметр(P)</button>
+                <button class="button" type="button" id="Square_s">Рассчитать площадь(S)</button>
+            </div>
+            <div class="square-item square-item-3">
+                <div class="square element" id="square-id"></div>
+                <p id="pertext">Периметр: 0 м</p>
+                <p id="pertext2">Площадь: 0 м<sup>2</sup></p>
+            </div>
+        </div>
+
+        <div class="triangle-container">
+            <div class="triangle-item triangle-item-1">
+                <h1 style="font-size:30px;" >Введите длину стороны треугольника(м):</h1>
+                <input class="input" type="text" name="length_t" id="length_t" placeholder="Введите число"/>
+            </div>
+            <div class="triangle-item triangle-item-2">
+                <button class="button" type="button" id="Perimeter_t">Рассчитать периметр(P)</button>
+                <button class="button" type="button" id="Square_t">Рассчитать площадь(S)</button>
+            </div>
+            <div class="triangle-item triangle-item-3">
+                <div class="triangle element" id="triangle-id"></div>
+                <p id="pertext3">Периметр: 0 м</p>
+                <p id="pertext4">Площадь: 0 м<sup>2</sup></p>
+            </div>
+        </div>
+        <div class="circle-container">
+            <div class="circle-item circle-item-1">
+                <h1 style="font-size:30px;" >Введите радиус круга(м):</h1>
+                <input class="input" type="text" name="length_c" id="length_c" placeholder="Введите число"/>
+            </div>
+            <div class="circle-item circle-item-2">
+                <button class="button" type="button" id="Perimeter_c">Рассчитать длину окружности(P)</button>
+                <button class="button" type="button" id="Square_c">Рассчитать площадь(S)</button>
+            </div>
+            <div class="circle-item circle-item-3">
+                <div class="circle element" id="circle-id"></div>
+                <p id="pertext5">Периметр: 0 м</p>
+                <p id="pertext6">Площадь: 0 м<sup>2</sup></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="header-item header-item-1 passive-item"><a href="main.html">Главная</a></div>
+        <div class="header-item header-item-2 passive-item dropdown"><a href="projects.html">Мои работы</a></div>
+        <div class="header-item header-item-3 passive-item"><a href="useful.html">Полезное</a></div>
+    </div>
+    <script src="momentcalculator.js"></script>
+</body>
+</html>
